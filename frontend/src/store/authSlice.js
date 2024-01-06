@@ -160,7 +160,9 @@ const AuthSlice = createSlice({
 
         })
         builder.addCase(checkLoggedIn.rejected, (state, action) => {
-
+            toast(` (جاري تسجيل الخروج`, { toastId: '3242rf' })
+            localStorage.clear()
+            state.user = null
             state.isLoading = false
         })
 
